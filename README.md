@@ -1,0 +1,1 @@
+# A NestJS API curriculum generator
