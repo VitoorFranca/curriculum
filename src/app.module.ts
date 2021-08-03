@@ -8,6 +8,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config';
 import { UsersController } from './users/users.controller';
 import { UsersService } from './users/users.service';
+import { User, UserSchema } from './schemas/user.schema';
 
 @Module({
   imports:
@@ -17,9 +18,11 @@ import { UsersService } from './users/users.service';
         `mongodb+srv://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASS}@cluster0.jhzfs.mongodb.net/${process.env.MONGO_DB_NAME}?retryWrites=true&w=majority`,
         {
           useNewUrlParser: true,
-          useUnifiedTopology: true
+          useUnifiedTopology: true,
+          useFindAndModify: false
         }
       ),
+      MongooseModule.forFeature([{ name: User.name, schema: UserSchema }])
     ],
   controllers: [AppController, UsersController],
   providers: [AppService, UsersService],
