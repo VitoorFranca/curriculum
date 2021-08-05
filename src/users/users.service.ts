@@ -5,7 +5,6 @@ import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { User, UserDocument } from '../schemas/user.schema';
 import { Response } from './entities/response.entitie';
-import { ServerResponse } from 'http';
 
 @Injectable()
 export class UsersService {
