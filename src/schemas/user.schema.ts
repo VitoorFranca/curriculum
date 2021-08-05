@@ -14,6 +14,9 @@ export class User {
   @Prop({ required: true })
   password: string;
 
+  @Prop()
+  curriculums: [string];
+
   @Prop({ default: 'to use' })
   role: string;
 
