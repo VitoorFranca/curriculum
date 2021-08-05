@@ -5,28 +5,28 @@ export type UserDocument = User & Document;
 
 @Schema()
 export class User {
-  @Prop()
+  @Prop({ required: true })
   name: string;
 
-  @Prop()
+  @Prop({ required: true })
   email: string;
 
-  @Prop()
+  @Prop({ required: true })
   password: string;
 
-  @Prop()
+  @Prop({ default: 'to use' })
   role: string;
 
-  @Prop()
+  @Prop({ default: 'free' })
   status: string;
 
-  @Prop()
+  @Prop({ default: false })
   isPremium: boolean;
 
-  @Prop({type: Date, default: new Date() })
+  @Prop({ default: new Date() })
   createdAt: Date;
 
-  @Prop({type: Date, default: new Date() })
+  @Prop({ default: new Date() })
   updatedAt: Date;
 
 }
