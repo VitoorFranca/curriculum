@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { UserEntitie } from './entities/user.entitie';
 
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
