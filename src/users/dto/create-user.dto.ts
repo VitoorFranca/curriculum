@@ -9,7 +9,7 @@ export class CreateUserDto {
   readonly email: string;
 
   @IsString()
-  readonly password: string;
+  public password: string;
   
   @IsOptional()
   @IsString({ each: true })
