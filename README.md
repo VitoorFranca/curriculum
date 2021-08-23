@@ -2,4 +2,4 @@
 
 <small>
   <small>
-    <small> hoje foi um bom dia!
+    <small> 💪
